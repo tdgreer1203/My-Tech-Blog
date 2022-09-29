@@ -1,5 +1,5 @@
 async function loginFormHandler(event) {
-    console.log('button pressed');
+
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();
@@ -14,7 +14,8 @@ async function loginFormHandler(event) {
         }),
         headers: { 'Content-Type': 'application/json' }
       });
-  
+      const result = await response.json();
+      console.log(result);
       if (response.ok) {
         document.location.replace('/dashboard/');
       } else {
@@ -24,6 +25,7 @@ async function loginFormHandler(event) {
   }
   
   async function signupFormHandler(event) {
+    console.log('button pressed');
     event.preventDefault();
     console.log('Butotn Pressed')
   
@@ -42,15 +44,16 @@ async function loginFormHandler(event) {
         headers: { 'Content-Type': 'application/json' }
       });
   
+      const result = await response.json();
+      console.log(result);
+
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        //document.location.replace('/dashboard/');
       } else {
         alert(response.statusText);
       }
     }
   }
-  
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-  
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
   

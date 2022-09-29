@@ -17,18 +17,16 @@
             <a href="/" class="brand-logo">My Tech Blog</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
-                <li>
                 {{#if loggedIn}}
-                    <a href="/dashboard">Dashboard</a>
-                    <button id="logout" class="btn-no-style">Logout</button>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
                 {{else}}
-                    <a href="/login"><strong>Login</strong></a>
+                    <li><a href="/login"><strong>Login</strong></a></li>
                 {{/if}}
-                </li>
             </ul>
         </div>
       </nav>
-        <div id="index-banner" class="parallax-container">
+  <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
@@ -61,6 +59,7 @@
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/javascript/parallax.js"></script>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
