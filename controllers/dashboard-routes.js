@@ -13,6 +13,7 @@ router.get('/', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
+      'text',
       'created_at'
     ],
     include: [
@@ -45,6 +46,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
+      'text',
       'created_at'
     ],
     include: [

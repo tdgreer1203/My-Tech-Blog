@@ -1,4 +1,10 @@
-{{> post-info post}}
+  <h2>{{post.title}}</h2>
+  <div class="meta">
+    Created by <strong class="orange-text">{{post.user.username}}</strong> on {{format_date post.created_at}}
+  </div>
+  <div class="post-text">
+    <p>{{post.text}}</p>
+  </div>
 
 {{#if loggedIn}}
 <form class="comment-form">

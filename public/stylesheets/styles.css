@@ -51,3 +51,21 @@ a {
 footer {
     margin-top: 50px;
 }
+
+.comments {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.comment {
+  margin-bottom: 40px;
+}
+
+.input-field input[type=text]:focus + label {
+  color: #000 !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
+}

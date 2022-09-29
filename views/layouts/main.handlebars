@@ -16,11 +16,10 @@
         <div class="nav-wrapper container">
             <a href="/" class="brand-logo">My Tech Blog</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="/">Home</a></li>
                 <li>
                 {{#if loggedIn}}
-                    <a href="/dashboard">dashboard</a>
+                    <a href="/dashboard">Dashboard</a>
                     <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
                     <a href="/login"><strong>Login</strong></a>
@@ -38,7 +37,7 @@
           <h5 class="header col s12 light">My first copmlete blog site!</h5>
         </div>
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Sign Up</a>
+          <a href="/login" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Sign Up</a>
         </div>
         <br><br>
       </div>
