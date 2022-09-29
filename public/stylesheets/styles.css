@@ -69,3 +69,7 @@ footer {
   border-bottom: 1px solid #ff9800 !important;
   box-shadow: 0 1px 0 0 #ff9800 !important;
 }
+
+.post-title {
+  text-align: center;
+}

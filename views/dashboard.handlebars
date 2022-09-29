@@ -2,15 +2,19 @@
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+    <div class="row">
+      <div class="input-field col s8">
+        <input placeholder="Title" id="post-title" type="text" name="post-title" class="validate">
+      </div>
     </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+    <div class="row">
+      <div class="input-field col s8">
+        <textarea placeholder="Text" id="post-text" type="text" name="post-text" class="validate"></textarea>
+      </div>
     </div>
-    <button type="submit" class="btn">Create</button>
+    <div class="row">
+      <a type="submit" class="btn-large waves-effect waves-light orange lighten-1">Create</a>
+    </div>
   </form>
 </section>
 
