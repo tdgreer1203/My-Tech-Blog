@@ -1,14 +1,20 @@
-{{> post-info post}}
+  <h2 class="post-title">{{post.title}}</h2>
+  <div class="meta">
+    Created by <strong class="orange-text">{{post.user.username}}</strong> on {{format_date post.created_at}}
+  </div>
+  <div class="post-text">
+    <p>{{post.text}}</p>
+  </div>
 
 {{#if loggedIn}}
 <form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+  <div class="row">
+    <div class="input-field col s8">
+      <textarea placeholder="Text" id="comment-body" type="text" name="comment-body" class="validate"></textarea>
+    </div>
   </div>
-
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+  <div class="row">
+    <button type="submit">Add Comment</button>
   </div>
 </form>
 {{/if}}
@@ -17,5 +23,4 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
 {{/if}}
