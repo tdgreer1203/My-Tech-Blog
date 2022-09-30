@@ -79,3 +79,5 @@ This project uses Materialize, Express, Sequelize, MySQL, Bcrypt, Handlebars, an
 Theo Greer - tdgreer1203@gmail.com
 
 Project Link: [https://github.com/tdgreer1203/My-Tech-Blog.git](https://github.com/tdgreer1203/My-Tech-Blog.git)
+
+Live Version: [https://my-tech-blog-tdgreer1203.herokuapp.com/](https://my-tech-blog-tdgreer1203.herokuapp.com/)
