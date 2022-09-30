@@ -1,0 +1,26 @@
+  <h2 class="post-title">{{post.title}}</h2>
+  <div class="meta">
+    Created by <strong class="orange-text">{{post.user.username}}</strong> on {{format_date post.created_at}}
+  </div>
+  <div class="post-text">
+    <p>{{post.text}}</p>
+  </div>
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div class="row">
+    <div class="input-field col s10">
+      <textarea placeholder="Text" id="comment-body" type="text" name="comment-body" class="validate"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <button type="submit" class="btn-large waves-effect waves-light orange lighten-1">Add Comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

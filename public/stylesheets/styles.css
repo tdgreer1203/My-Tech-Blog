@@ -1,0 +1,82 @@
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+a {
+    color: #ff9800;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.comments {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.comment {
+  margin-bottom: 40px;
+}
+
+.input-field input[type=text]:focus + label {
+  color: #000 !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.post-title {
+  text-align: center;
+}
+
+textarea {
+  height: 8rem;
+}
+
+textarea:focus {
+  border-color:#ff9800 !important;
+}

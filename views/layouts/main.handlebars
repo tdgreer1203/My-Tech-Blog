@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Tech News</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header>
+      <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="/" class="brand-logo">My Tech Blog</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                {{#if loggedIn}}
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/login"><strong>Login</strong></a></li>
+                {{/if}}
+            </ul>
+        </div>
+      </nav>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text text-lighten-2">My Tech Blog</h1>
+        <div class="row center">
+          <h5 class="header col s12 white-text light">My first copmlete blog site!</h5>
+        </div>
+        <div class="row center">
+          <button href="/login" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Sign Up</button>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="/img/parallax1.jpg" alt="Image of illuminated microchips"></div>
+  </div>
+    </header>
+    <main class="container">
+      {{{ body }}}
+    </main>
+    <footer class="page-footer black">
+        <div class="container">
+            <h5 class="orange-text">Project Info</h5>
+            <p class="grey-text text-lighten-4">Welcome to My Tech Blog. I created this site as my very first full-stack website, built from scratch. I had completed quite a few projects (both individually and as part of a team), where my focus was either on the front-end, or the back-end, but never the full-stack. This project was very fun to create, and it was a great to be able to put all of the parts together. For the back-end, I'm experiencing with Handlebars, and for the CSS framework, I'm using Materialize. The datbaase for the site was set up using Sequelize, and a MySql back-end.</p>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text" href="https://theogreer.com">Theo Greer</a>
+            </div>
+        </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/javascript/parallax.js"></script>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
