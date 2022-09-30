@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="input-field col s8">
+      <div class="input-field col s10">
         <textarea value="{{post.text}}" id="post-text" type="text" name="post-text" class="validate"></textarea>
       </div>
     </div>
@@ -20,19 +20,9 @@
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
     <button type="submit" class="btn-large waves-effect waves-light orange lighten-1">Save Post</button>
-    <button type="button" class="btn-large waves-effect waves-light red lighten-1">Delete Post</button>
+    <button type="button" id="delete-post-btn" class="btn-large waves-effect waves-light red lighten-1">Delete Post</button>
   </form>
 </article>
-<form class="comment-form">
-  <div class="row">
-    <div class="input-field col s8">
-      <textarea placeholder="Comment" id="comment-body" type="text" name="comment-body" class="validate"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <a type="submit" class="btn-large waves-effect waves-light orange lighten-1">Add Comment</a>
-  </div>
-</form>
 
 {{> comments post.comments}}
 

@@ -72,3 +72,11 @@ footer {
 .post-title {
   text-align: center;
 }
+
+textarea {
+  height: 8rem;
+}
+
+textarea:focus {
+  border-color:#ff9800 !important;
+}
